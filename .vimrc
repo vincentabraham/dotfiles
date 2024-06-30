@@ -26,7 +26,7 @@ set softtabstop=2
 set expandtab
 set noshiftround
 
-" Map the Explore command
+" Toggle explorer
 nnoremap <C-e> :Lexplore<CR>
 
 " Cursor motion
