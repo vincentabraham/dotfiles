@@ -8,7 +8,8 @@ syntax on
 set modelines=0
 
 " Hybrid line numbers
-set number relativenumber
+" set number relativenumber
+set number
 
 " Show file stats
 set ruler
@@ -17,8 +18,8 @@ set ruler
 set encoding=utf-8
 
 " Whitespace
-set wrap
-set textwidth=79
+" set wrap
+" set textwidth=79
 set formatoptions=tcqrn1
 set tabstop=2
 set shiftwidth=2
@@ -26,8 +27,14 @@ set softtabstop=2
 set expandtab
 set noshiftround
 
-" Toggle explorer
+" Map the Explore command
 nnoremap <C-e> :Lexplore<CR>
+" Buffer navigation
+nnoremap <C-h> :bp<CR>
+nnoremap <C-l> :bn<CR>
+
+" Set Vim's current directory to the opened buffer
+set autochdir
 
 " Cursor motion
 set scrolloff=3
