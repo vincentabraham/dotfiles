@@ -4,6 +4,11 @@ set nocompatible
 " Turn on syntax highlighting
 syntax on
 
+" Automatic indentation
+set autoindent
+
+" Change cursor in different modes
+
 " Security
 set modelines=0
 
@@ -50,6 +55,8 @@ nnoremap k gk
 set hidden
 
 " Rendering
+set ttimeout
+set ttimeoutlen=1
 set ttyfast
 
 " Status bar
@@ -77,3 +84,7 @@ map <leader>q gqip
 " Visualize tabs and newlines
 set listchars=tab:▸\ ,eol:¬
 map <leader>l :set list!<CR> " Toggle tabs and EOL
+
+" Change how the cursor looks in insert and command mode
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
