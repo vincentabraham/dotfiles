@@ -23,7 +23,6 @@ set ruler
 inoremap ( ()<Left>
 inoremap [ []<Left>
 inoremap { {}<Left>
-inoremap ' ''<Left>
 inoremap " ""<Left>
 
 " Encoding
