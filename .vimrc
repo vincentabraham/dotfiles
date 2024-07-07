@@ -19,6 +19,13 @@ set number
 " Show file stats
 set ruler
 
+" Automatic closing pairs
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap { {}<Left>
+inoremap ' ''<Left>
+inoremap " ""<Left>
+
 " Encoding
 set encoding=utf-8
 
