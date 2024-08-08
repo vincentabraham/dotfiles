@@ -94,3 +94,7 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 " Change how the cursor looks in insert and command mode
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+
+" Resize splits using mouse
+set mouse=r
+set ttymouse=xterm2
