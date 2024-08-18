@@ -100,3 +100,7 @@ noremap <C-p> :vertical resize +1<CR>
 noremap <C-o> :vertical resize -1<CR>
 noremap <C-i> :resize +1<CR>
 noremap <C-u> :resize -1<CR>
+
+" commentary-vim (https://github.com/tpope/vim-commentary)
+filetype plugin indent on
+autocmd FileType verilog setlocal commentstring=//\ %s
