@@ -95,6 +95,8 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
-" Resize splits using mouse
-set mouse=r
-set ttymouse=xterm2
+" Resize buffers
+noremap <C-p> :vertical resize +1<CR>
+noremap <C-o> :vertical resize -1<CR>
+noremap <C-i> :resize +1<CR>
+noremap <C-u> :resize -1<CR>
