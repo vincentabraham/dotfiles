@@ -1,11 +1,34 @@
 " Don't try to be vi compatible
 set nocompatible
+if &term == 'xterm-kitty'
+    let &t_ut=''
+endif
+
+call plug#begin()
+  " List your plugins here
+  Plug 'tpope/vim-sensible'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-vinegar'
+  Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'vhda/verilog_systemverilog.vim'
+  Plug 'danilo-augusto/vim-afterglow'
+call plug#end()
 
 " Turn on syntax highlighting
 syntax on
 
 " Automatic indentation
 set autoindent
+set termguicolors
+
+colorscheme afterglow
+let g:afterglow_italic_comments=1
+let g:airline_theme = 'afterglow'
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Change cursor in different modes
 
@@ -39,7 +62,7 @@ set expandtab
 set noshiftround
 
 " Map the Explore command
-nnoremap <C-e> :Lexplore<CR>
+nnoremap <C-e> :Explore<CR>
 " Buffer navigation
 nnoremap <C-h> :bp<CR>
 nnoremap <C-l> :bn<CR>
@@ -103,4 +126,5 @@ noremap <C-u> :resize -1<CR>
 
 " commentary-vim (https://github.com/tpope/vim-commentary)
 filetype plugin indent on
-autocmd FileType verilog setlocal commentstring=//\ %s
+autocmd FileType verilog_systemverilog setlocal commentstring=//\ %s
+set noshowmode
