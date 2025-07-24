@@ -15,7 +15,8 @@ return {
      require("mason-lspconfig").setup {
         ensure_installed = {
           "lua_ls",
-          -- "clangd",
+--          "clangd",
+--          "basedpyright",
         }
       }
     end
@@ -25,7 +26,8 @@ return {
     config = function()
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
-      -- lspconfig.clangd.setup({})
+--      lspconfig.clangd.setup({})
+--      lspconfig.basedpyright.setup({})
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {}) -- displays documentation
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {}) -- go to def
       vim.keymap.set({'n', 'v'}, '<space>ca', vim.lsp.buf.code_action, {}) -- code action
