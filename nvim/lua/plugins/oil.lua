@@ -20,5 +20,13 @@ return {
       vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
       -- Open parent directory in floating window
       vim.keymap.set("n", "<space>-", require("oil").toggle_float)
+      -- hide line numbers in oil buffer  
+      vim.api.nvim_create_autocmd("FileType", {
+      pattern = "oil",
+      callback = function()
+        vim.opt_local.number = false
+        vim.opt_local.relativenumber = false
+      end,
+      })
     end
 }
